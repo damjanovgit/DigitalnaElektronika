@@ -1,15 +1,17 @@
-on: pull_request
-name: Pull Request
+name: Test workflow
+on:
+push:
+pull_request:
+workflow_dispatch:
+
+
 jobs:
-  validate-tests:
-    name: Run tests
-    runs-on: raspberry
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@main
-    - name: Run your tests
-      run: make tests
-    - name: Validate Tests
-      uses: quality-of-tests/has-useful-tests-action@main
-      with:
-        run-tests: echo Hello
+build:
+runs-on: rpi
+
+
+steps:
+  - uses: actions/checkout@v2
+  - uses: actions/setup-python@v2
+  - name: Run a one-line script
+    run: echo Hello, world!
