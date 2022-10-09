@@ -1,17 +1,12 @@
-name: Test workflow
-on:
-push:
-pull_request:
-workflow_dispatch:
-
-
+on: pull_request
+name: Pull Request job
 jobs:
-build:
-runs-on: rpi
+  validate-tests:
+    name: Prvi test
+    runs-on: raspberry
+    steps:
+    - name: Checkout 1.
+      uses: actions/checkout@main
+    - name: Pokrecem test
+      run: echo Hello
 
-
-steps:
-  - uses: actions/checkout@v2
-  - uses: actions/setup-python@v2
-  - name: Run a one-line script
-    run: echo Hello, world!
