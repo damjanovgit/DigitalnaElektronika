@@ -6,10 +6,10 @@ jobs:
     runs-on: raspberry
     steps:
     - name: Checkout code
-      uses: actions/checkout@master
+      uses: actions/checkout@main
     - name: Run your tests
       run: make tests
     - name: Validate Tests
-      uses: quality-of-tests/has-useful-tests-action@master
+      uses: quality-of-tests/has-useful-tests-action@main
       with:
         run-tests: echo Hello
