@@ -3,7 +3,7 @@ name: Pull Request job
 jobs:
   validate-tests:
     name: Prvi test
-    runs-on: raspberry
+    runs-on: raspberrypi
     steps:
     - name: Checkout 1.
       uses: actions/checkout@main
