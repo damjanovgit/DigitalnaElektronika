@@ -8,5 +8,6 @@ jobs:
     - name: Checkout 1.
       uses: actions/checkout@main
     - name: Pokrecem test
-      run: echo Hello
+      run: |
+        ls
 
