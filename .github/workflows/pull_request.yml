@@ -10,4 +10,5 @@ jobs:
     - name: Pokrecem test
       run: |
         ls
+        echo 1
 
