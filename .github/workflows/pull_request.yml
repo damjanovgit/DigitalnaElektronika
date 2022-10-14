@@ -11,6 +11,6 @@ jobs:
       run: |
         ls
         exit 1
-    - name: Pokrecem testbench ali sa grane
+    - name: Pokrecem testbench
         run: |
         echo "Radi li"
