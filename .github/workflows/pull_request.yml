@@ -12,4 +12,5 @@ jobs:
         ls
         exit 1
     - name: Pokrecem testbench
+        run: |
         echo "Radi li"
