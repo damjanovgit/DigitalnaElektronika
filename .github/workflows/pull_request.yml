@@ -10,7 +10,5 @@ jobs:
     - name: Kompajliram kod
       run: |
         ls
+        echo Hello
         exit 1
-    - name: Pokrecem testbench
-        run: |
-        echo "Radi li"
