@@ -9,7 +9,9 @@ jobs:
       uses: actions/checkout@main
     - name: Kompajliram kod
       run: |
+        echo "Unutar ovo fajla"
         ls
         echo Hello
         ls ..
+        echo Kraj
         exit 1
