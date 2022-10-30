@@ -11,5 +11,5 @@ jobs:
       run: |
         echo "Radni direktorijum je"
         pwd
-        python ../../../../CompileAndRunTest.py
+        python ../../../../CompileAndRunTest.py /home/dami/actions-runner/_work/DigitalnaElektronika/DigitalnaElektronika
         exit 1
