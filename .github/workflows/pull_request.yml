@@ -9,4 +9,7 @@ jobs:
       uses: actions/checkout@main
     - name: Kompajliram kod
       run: |
-      py ../co
+        echo "Radni direktorijum je"
+        pwd
+        python ../../../../CompileAndRunTest.py /home/dami/actions-runner/_work/DigitalnaElektronika/DigitalnaElektronika
+        exit 1
