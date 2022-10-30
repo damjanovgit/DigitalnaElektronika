@@ -9,15 +9,7 @@ jobs:
       uses: actions/checkout@main
     - name: Kompajliram kod
       run: |
-        echo "Radi se na grani"
-        echo ${GITHUB_REF##*/}
         echo "Radni direktorijum je"
         pwd
-        echo "Unutar ovo fajla"
-        ls
-        echo "Sa Zadatak_1 repoa"
-        echo Hello
-        echo "Nazad"
-        
-        ls ../../..
+        py ../../../../CompileAndRunTest.py
         exit 1
