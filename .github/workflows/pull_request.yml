@@ -11,5 +11,5 @@ jobs:
       run: |
         echo "Radni direktorijum je"
         pwd
-        py ../../../../CompileAndRunTest.py
+        python ../../../../CompileAndRunTest.py
         exit 1
