@@ -9,6 +9,4 @@ jobs:
       uses: actions/checkout@main
     - name: Kompajliram kod
       run: |
-        ls
-        echo Hello
-        exit 1
+      py ../co
