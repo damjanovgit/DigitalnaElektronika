@@ -12,4 +12,6 @@ jobs:
         ls
         echo "Sa Zadatak_1 repoa"
         echo Hello
+        echo "Nazad"
+        ls ../../..
         exit 1
