@@ -10,5 +10,6 @@ jobs:
     - name: Kompajliram kod
       run: |
         ls
+        echo "Sa Zadatak_1 repoa"
         echo Hello
         exit 1
