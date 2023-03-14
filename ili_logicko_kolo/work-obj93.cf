@@ -1,0 +1,7 @@
+v 4
+file . "or_gate_tb.vhdl" "b18827d619e7ea1b1a0b6bb38fc0492dfd3e179b" "20230314103129.894":
+  entity or_gate_tb at 4( 6) + 0 on 13;
+  architecture or_gate_tb_functionality of or_gate_tb at 10( 94) + 0 on 14;
+file . "or_gate.vhdl" "d1d07a7fc7a01a84f8d3bbe86b9b45297db63cca" "20230314102900.848":
+  entity or_gate at 3( 4) + 0 on 11;
+  architecture or_gate_functionality of or_gate at 14( 166) + 0 on 12;
