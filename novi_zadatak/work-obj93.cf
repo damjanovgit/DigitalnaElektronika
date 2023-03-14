@@ -1,0 +1,7 @@
+v 3
+file . "or_gate.vhdl" "20230314011256.000" "20230314021256.051":
+  entity or_gate at 3( 4) + 0 on 11;
+  architecture or_gate_functionality of or_gate at 14( 166) + 0 on 12;
+file . "or_gate_tb.vhdl" "20230314011354.000" "20230314021355.514":
+  entity or_gate_testbench at 2( 2) + 0 on 15;
+  architecture or_gate_testbench_functionality of or_gate_testbench at 8( 104) + 0 on 16;
