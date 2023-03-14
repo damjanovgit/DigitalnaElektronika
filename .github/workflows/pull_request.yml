@@ -9,9 +9,4 @@ jobs:
       uses: actions/checkout@main
     - name: Kompajliram kod
       run: |
-        echo "Unutar ovo fajla"
-        ls
-        echo Hello
-        ls ..
-        echo Kraj
-        exit 1
+        python ../../../../CompileAndRunTest.py /home/dami/actions-runner/_work/DigitalnaElektronika/DigitalnaElektronika
