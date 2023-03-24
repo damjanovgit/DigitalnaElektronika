@@ -1,5 +1,25 @@
 # DigitalnaElektronika
 
+## TL;DR
+1) `git clone https://github.com/damjanovgit/DigitalnaElektronika` ---- **SAMO JEDNOM**
+2) `git checkout -b markomarkovic_grana_vjezba_1234` ----- **NOVA GRANA ZA SVAKU VJEŽBU**
+3) cd DigitalnaElektronika
+4) `mkdir markom1101_11` ----- **OVAJ DIREKTORIJUM SE PRAVI SAMO JEDNOM**
+5) `cd markom1101_11`
+6) `mkdir vjezbaN`
+8) rad na vježbi
+9) `git add --all`
+10) `git commit -m "Dodajem .vhdl fajlove i testbench za vježbu N"`
+11) `git push
+12) `git checkout main
+13) `git pull
+14) `git checkout markomarkovic_grana_vjezba_1234`
+15) `git merge main`
+16) u slučaju da postoje konflikti, rještiti ih tako da fajl u konfliktu ima sadržaj i grane na koju se radi spajanje i grane sa koje se radi spajanje. Po izvršenim izmjenama ponoviti korake od tačke 9) do tačke 16). Ovo ponavljati sve dok nastaju konflikti.
+17) Izrada "Pull request-a" da se nova grana spoji sa "main" granom
+18) Dodati Damjana u review koda
+19) U slučaju pada testova ponoviti sve korake počevši od stavke 8), prilagoditi kod tako da testovi prolaze
+
 ## Radni tok
 
 Za git postoji mnogo aplikacija koje na vizelni način omogućavaju manipulaciju repozitorijum ali ipak, sa gitom se uglavnom radi iz terminala / konzole.
@@ -85,24 +105,6 @@ Ukoliko testovi padnu, potrebno je vratiti se na granu i izmjeniti kod tako da t
 
 `git branch` - Ispisuje trenutnu granu na kojoj se lokalni repozitorijum nalazi
 
-## TL;DR
-1) `git clone https://github.com/damjanovgit/DigitalnaElektronika` ---- **SAMO JEDNOM**
-2) `git checkout -b markomarkovic_grana_vjezba_1234` ----- **NOVA GRANA ZA SVAKU VJEŽBU**
-3) cd DigitalnaElektronika
-4) `mkdir markom1101_11` ----- **OVAJ DIREKTORIJUM SE PRAVI SAMO JEDNOM**
-5) `cd markom1101_11`
-6) `mkdir vjezbaN`
-8) rad na vježbi
-9) `git add --all`
-10) `git commit -m "Dodajem .vhdl fajlove i testbench za vježbu N"`
-11) `git push
-12) `git checkout main
-13) `git pull
-14) `git checkout markomarkovic_grana_vjezba_1234`
-15) `git merge main`
-16) u slučaju da postoje konflikti, rještiti ih tako da fajl u konfliktu ima sadržaj i grane na koju se radi spajanje i grane sa koje se radi spajanje. Po izvršenim izmjenama ponoviti korake od tačke 9) do tačke 16). Ovo ponavljati sve dok nastaju konflikti.
-17) Izrada "Pull request-a" da se nova grana spoji sa "main" granom
-18) Dodati Damjana u review koda
-19) U slučaju pada testova ponoviti sve korake počevši od stavke 8), prilagoditi kod tako da testovi prolaze
+
 
 
