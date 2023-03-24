@@ -2,7 +2,9 @@
 
 Repozitorijum na kome se postavljaju vježbe iz predmeta Digitalna elektronika.
 
-## TL;DR
+# GIT komande
+
+### TL;DR
 1) `git clone https://github.com/damjanovgit/DigitalnaElektronika` ---- **SAMO JEDNOM**
 2) `git checkout -b markomarkovic_grana_vjezba_1234` ----- **NOVA GRANA ZA SVAKU VJEŽBU**
 3) `cd DigitalnaElektronika`
@@ -22,7 +24,7 @@ Repozitorijum na kome se postavljaju vježbe iz predmeta Digitalna elektronika.
 18) Dodati Damjana u review koda
 19) U slučaju pada testova ponoviti sve korake počevši od stavke 8), prilagoditi kod tako da testovi prolaze
 
-## Radni tok
+### Radni tok
 
 Za git postoji mnogo aplikacija koje na vizelni način omogućavaju manipulaciju repozitorijum ali ipak, sa gitom se uglavnom radi iz terminala / konzole.
 
