@@ -108,5 +108,7 @@ Ukoliko testovi padnu, potrebno je vratiti se na granu i izmjeniti kod tako da t
 `git branch` - Ispisuje trenutnu granu na kojoj se lokalni repozitorijum nalazi
 
 
+# GHDL
 
+# CMAKE
 
