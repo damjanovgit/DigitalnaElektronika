@@ -82,9 +82,10 @@ Ukoliko testovi padnu, potrebno je vratiti se na granu i izmjeniti kod tako da t
 ## Korisne komande
 
 `git status` - Provjerava trenutni status, crvenim slovima ispisuje fajlove koji se mogu dodati u stagging zonu da bi se formirao komit.
+
 `git branch` - Ispisuje trenutnu granu na kojoj se lokalni repozitorijum nalazi
 
-**TL;DR**
+## TL;DR
 1) `git clone https://github.com/damjanovgit/DigitalnaElektronika` ---- **SAMO JEDNOM**
 2) `git checkout -b markomarkovic_grana_vjezba_1234` ----- **NOVA GRANA ZA SVAKU VJEŽBU**
 3) cd DigitalnaElektronika
