@@ -17,7 +17,7 @@ Repozitorijum na kome se postavljaju vježbe iz predmeta Digitalna elektronika.
 13) `git pull
 14) `git checkout markomarkovic_grana_vjezba_1234`
 15) `git merge main`
-16) u slučaju da postoje konflikti, rještiti ih tako da fajl u konfliktu ima sadržaj i grane na koju se radi spajanje i grane sa koje se radi spajanje. Po izvršenim izmjenama ponoviti korake od tačke 9) do tačke 16). Ovo ponavljati sve dok nastaju konflikti.
+16) U slučaju da postoje konflikti, rještiti ih tako da fajl u konfliktu ima sadržaj i grane na koju se radi spajanje i grane sa koje se radi spajanje. Po izvršenim izmjenama ponoviti korake od tačke 9) do tačke 16). Ovo ponavljati sve dok nastaju konflikti.
 17) Izrada "Pull request-a" da se nova grana spoji sa "main" granom
 18) Dodati Damjana u review koda
 19) U slučaju pada testova ponoviti sve korake počevši od stavke 8), prilagoditi kod tako da testovi prolaze
