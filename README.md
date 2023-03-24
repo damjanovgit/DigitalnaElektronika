@@ -5,7 +5,7 @@ Repozitorijum na kome se postavljaju vježbe iz predmeta Digitalna elektronika.
 ## TL;DR
 1) `git clone https://github.com/damjanovgit/DigitalnaElektronika` ---- **SAMO JEDNOM**
 2) `git checkout -b markomarkovic_grana_vjezba_1234` ----- **NOVA GRANA ZA SVAKU VJEŽBU**
-3) cd DigitalnaElektronika
+3) `cd DigitalnaElektronika`
 4) `mkdir markom1101_11` ----- **OVAJ DIREKTORIJUM SE PRAVI SAMO JEDNOM**
 5) `cd markom1101_11`
 6) `mkdir vjezbaN`
