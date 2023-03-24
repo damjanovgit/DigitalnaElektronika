@@ -2,7 +2,7 @@
 
 Repozitorijum na kome se postavljaju vježbe iz predmeta Digitalna elektronika.
 
-# GIT komande
+# Radni tok, GIT komande
 
 ### TL;DR
 1) `git clone https://github.com/damjanovgit/DigitalnaElektronika` ---- **SAMO JEDNOM**
