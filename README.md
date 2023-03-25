@@ -101,9 +101,23 @@ Zatim je potrebno kliknuti na "Create pull request" i dodati Damjana za pregled 
 ![image](https://user-images.githubusercontent.com/45741417/227655755-971c762f-42e4-46b1-8151-52be7da0eb7d.png)
 
 Kolege koje su dodane u review su u **OBAVEZI** da kod pregledaju i odobre ga ili da ga odbiju.
-Kada su svi odobrili kod, pokreću se testovi i ako testovi uspješno prođu vježba je završena.
+Kada su svi odobrili pull request (PR), pokreću se testovi i ako testovi uspješno prođu vježba je završena.
 Ukoliko testovi padnu, potrebno je vratiti se na granu i izmjeniti kod tako da testovi prolaze, napraviti novi "Pull request" ponoviti prethodnu proceduru.
 
+## Kako riješiti konflikt
+
+Konflikti se mogu pojaviti kada se izmjene na jednoj grani ne podudaraju sa izmjenama na drugoj grani u koju se pokušavaju spojiti. U tom slučaju, Git će prijaviti konflikt i neće automatski spojiti grane.
+
+Kako bi se konflikt riješio, potrebno je:
+1) Pregledati konflikt: Prvi korak je pregledati datoteke u kojima se pojavio konflikt. Git će označiti mjesta gdje se nalaze razlike između izmjena.
+2) Riješiti konflikt: Nakon pregleda konflikta, potrebno je izvršiti izmjene u datotekama i riješiti konflikt. To obično znači da treba izbrisati jednu verziju i zadržati drugu, ili spojiti dvije verzije na način koji odgovara tvom cilju.
+3) Dodati datoteke za commit: Nakon rješavanja konflikta, potrebno je dodati datoteke za commit naredbom git add <naziv-datoteke>
+4) Commit izmjena: Nakon dodavanja datoteka za commit, potrebno je izvršiti commit izmjena naredbom git commit -m "<opis-izmjena>"
+5) Push izmjena: Nakon izvršenog commit-a, potrebno je push-ati izmjene na Git repozitorijum naredbom git push origin <ime-tvoje-grane>.
+6) Ponoviti proces pull request-a: Nakon pushanja izmjena na tvoju granu, potrebno je ponoviti proces pull request-a na servisu, kojim se traži da se izmjene spoje sa glavnom granom.
+    
+U slučaju složenijih konflikata, može biti potrebno komunicirati sa kolegama i zajedno pronaći rješenje.
+    
 ## Korisne komande
 
 `git status` - Provjerava trenutni status, crvenim slovima ispisuje fajlove koji se mogu dodati u stagging zonu da bi se formirao komit.
