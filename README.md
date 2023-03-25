@@ -19,9 +19,9 @@ U repozitorijumu je potrebno da se nalazi direktorijum za svaku vježbu, u kojem
 9) `git add --all`
 10) `git commit -m "Dodajem .vhdl fajlove i testbench za vježbu N"`
 11) `git push`
-    `git push origin <ime_grane> 
-12) `git checkout main
-13) `git pull
+    `git push origin <ime_grane>`
+12) `git checkout main`
+13) `git pull`
 14) `git checkout markomarkovic_grana_vjezba_1234`
 15) `git merge main`
 16) U slučaju da postoje konflikti, rještiti ih tako da fajl u konfliktu ima sadržaj i grane na koju se radi spajanje i grane sa koje se radi spajanje. Po izvršenim izmjenama ponoviti korake od tačke 9) do tačke 16). Ovo ponavljati sve dok nastaju konflikti.
