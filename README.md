@@ -52,7 +52,7 @@ Za početak, potrebno je napraviti sopstvenu granu na kojoj se radi svaka vježb
 
 Ovdje je "markomarkovic_grana_vjezba_1234" ime grane koja se pravi. U komandi se nalazi "-b" fleg koji govori da se pravi nova grana.
 
-Promjena sa neke grane na neku drugu, već postojeću radi se sa komandom `git checkout markomarkovic_grana_vjezba_1234` (koristi se ako grana markomarkovic_grana_vjezba_1234)
+Promjena sa neke grane na neku drugu, već postojeću radi se sa komandom `git checkout markomarkovic_grana_vjezba_1234` (koristi se ako grana markomarkovic_grana_vjezba_1234 već postoji)
 
 Kada se napravi grana, u diretkorijumu DigitalnaElektronika napraviti novi direktorijum (folder) pod vašim imenom, markom1101_11. Ime se pravi prema šablonu ime, prvo slovo prezimena i broj indeksa na kraju.
 
