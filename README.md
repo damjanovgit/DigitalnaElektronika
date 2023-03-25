@@ -245,8 +245,10 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
     
 Pretpostavimo da se nalazimo u root direktorijumu projekta, gdje se nalazi i CMakeLists.txt fajl.
 Koraci za pokretanje testova su sljedeći:
-1) Kreiranje direktorija za build:
+1) Kreiranje direktorijuma za build:
+    
     `mkdir build`
+    
     `cd build`
 2) Pokretanje CMake komande za generisanje Makefile-a:
     `cmake ..`
