@@ -128,4 +128,21 @@ U slučaju složenijih konflikata, može biti potrebno komunicirati sa kolegama 
 # GHDL
 
 # CMAKE
+    
+CMake je alat za upravljanje konfiguracijom i izgradnjom softvera koji se koristi za generisanje konfiguracijskih datoteka, koje opisuju proces kompilacije softverskog projekta. To znači da CMake omogućuje automatsku izgradnju i konfiguraciju projekata na različitim operativnim sistemima i platformama.
+
+CMake se sastoji od dva dijela - CMake skripte koje opisuju kompilaciju projekta i CMake generatora koji generiše datoteke za kompilaciju na osnovu CMake skripti. CMake se često koristi u projektima koji koriste više programskih jezika i biblioteka, što ga čini vrlo fleksibilnim.
+
+CMake koristi jednostavan i intuitivan skriptovski jezik koji se lako uči i koristi. U CMake skriptama definiše se izvorni kod projekta, ciljni operativni sistemi i platforme, potrebne vanjske biblioteke i drugi parametri koji su važni za kompilaciju projekta. CMake generator zatim generiše datoteke za izgradnju, poput Makefile-a, Visual Studio projekata, Xcode projekata i drugih datoteka.
+
+Prednosti CMake-a uključuju:
+
+1) Jednostavnost korištenja i prilagodljivost
+2) Mogućnost generisanja datoteka za kompilaciju na različitim operativnim sistemima i platformama
+3) Automatsko otkrivanje vanjskih biblioteka i njihova integracija u projekat
+4) Paralelna kompilacija projekta, što skraćuje vrijeme kompilacije
+ 
+ ## TL;DR
+ CMake je alat za upravljanje konfiguracijom i kompilacijom softvera koji olakšava proces kompilacije projekata na različitim platformama i operativnim sistemima.
+   
 
