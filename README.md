@@ -142,6 +142,48 @@ Prednosti GHDL-a uključuju:
 5) Podrška za veliki broj VHDL funkcija i tipova podataka
 
 GHDL je alat za sintezu i simulaciju VHDL koda koji omogućuje testiranje dizajna prije implementacije na fizičkom hardveru i olakšava razvoj digitalnih sustava.
+
+## Komande da bi se pokrenuo testbench pisan u GHDL-u
+    
+Da bi se pokrenuo VHDL kod i testbench u GHDL-u, potrebno je izvršiti sljedeće korake:
+    
+1) Instalirati GHDL
+
+2) Napisati VHDL kod: Obratite pažnju na to da kod mora biti ispravna VHDL sintaksa. VHDL kod bi trebao biti sačuvan sa ekstenzijom ".vhdl".
+
+3) Napisati testbench: Testbench je poseban kod koji se koristi za testiranje VHDL koda. Testbench obično uključuje generisanje ulaznih signala, simulaciju i provjeru izlaznih signala. Testbench bi trebao biti sačuvan sa ekstenzijom "_tb.vhdl".
+
+4) Kompajlirati VHDL kod i testbench: Kompilacija VHDL koda i testbencha uključuje stvaranje objektnih datoteka iz koda. Ovaj korak se obično izvršava s naredbom "ghdl -a <ime_datoteke>.vhdl". Na primjer, ako se VHDL kod nalazi u datoteci "test_kod.vhdl", naredba za kompilaciju bi bila "ghdl -a test_kod.vhdl". Ovaj korak bi trebao generisati objektne datoteke sa ekstenzijom ".o".
+
+5) Kreiranje izvrše datoteke: Nakon kompilacije VHDL koda i testbencha, sljedeći korak je stvaranje izvršne datoteke. Ovaj korak se obično izvršava s naredbom "ghdl -e <ime_entiteta>". Entitet je glavni dio VHDL koda i naredba će stvoriti izvršnu datoteku s imenom entiteta.
+
+6) Pokretanje simulacije: Kada je izvršna datoteka izrađena, moguće je pokrenuti simulaciju VHDL koda i testbencha. Ovo se obično izvršava s naredbom "ghdl -r <ime_entiteta> --vcd=<ime_datoteke>.vcd". Ova naredba će pokrenuti simulaciju, generisati VCD (Value Change Dump) datoteku koja sadrži vrijednosti signala tokom simulacije, a koja se može koristiti za vizualizaciju i analizu signala.
+
+7) Analiza rezultata: Nakon završetka simulacije, moguće je analizirati VCD datoteku da bi se provjerila ispravnost dizajna i da li je li testbench ispravno generisao ulazne signale.
+
+Flag --timeout u GHDL-u se koristi za postavljanje vremenskog ograničenja za simulaciju. Ovaj flag nam omogućava da navođenje koliko vremena simulacija može da traje prije nego što se automatski prekine. Njegova sintaksa izgleda ovako:
+    
+`ghdl --timeout=<vrijeme> <ime_test_benča>`
+    
+Vrijeme se navodi u sekundama, na primjer 10ns za 10 nano sekundi, 10s za 10 sekundi ili 2m za 2 minute. Ako simulacija ne uspije da se završi unutar postavljenog vremena, GHDL će automatski prekinuti simulaciju.
+
+Flag --assertion-level se koristi za podešavanje nivoa provjere asercija tokom simulacije. Asercije su tvrdnje koje je dizajner postavio u kodu kako bi provjerio da li se sistem ponaša ispravno. Ovaj flag omogućava da se navede koliko agresivne provjere želimo da se izvrše, pri čemu su veći nivoi provjere agresivniji i mogu otkriti više grešaka. Njegova sintaksa izgleda ovako:
+ 
+`ghdl --assertion-level=<nivo> <ime_test_benča>`
+
+## Vizuelizacija rezultata simulacije
+    
+Gtkwave je besplatan alat za vizualizaciju i analizu signala iz vremenskih simulacija. Omogućava korisnicima da detaljno istraže signale generisane u vremenskoj simulaciji i da pronađu uzroke problema u dizajnu.
+
+Da bi se koristio Gtkwave za vizualizaciju signala iz vremenskih simulacija, prvo je potrebno generisati VCD (Value Change Dump) fajl tokom simulacije. VCD fajl sadrži sve promjene signala tokom simulacije, zajedno sa vremenom kada se promjene događaju.
+
+Kada je generisan VCD fajl, otvara se Gtkwave i bira "Open" opcija iz "File" menija. U dijalogu koji se pojavljuje, bira se željeni VCD fajl.
+
+Nakon otvaranja fajla, u prozoru će se prikazati svi signali koji su generisani tokom simulacije. Moguće je birati koje signale prikazati i kojim bojama. Moguće je i  zumirati i pomijerati se kroz vremenski interval kako bi se detaljno proučile promjene signala.
+
+Gtkwave takođe omogućava da se dodaju različite vrste analiza signala, kao što su FFT (Fast Fourier Transform) i korelacija signala. Ove analize mogu pomoći da se  pronađe uzroke problema u dizajnu.
+
+Ukratko, Gtkwave je moćan alat za vizualizaciju i analizu signala iz vremenskih simulacija. Koristi se za proučavanje signala iz VHDL simulacija i pomaže u pronalaženju uzroka problema u dizajnu.
     
 # CMAKE
     
