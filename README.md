@@ -187,7 +187,7 @@ Ukratko, Gtkwave je moćan alat za vizualizaciju i analizu signala iz vremenskih
     
 # CMAKE
     
-CMake je alat za upravljanje konfiguracijom i izgradnjom softvera koji se koristi za generisanje konfiguracijskih datoteka, koje opisuju proces kompilacije softverskog projekta. To znači da CMake omogućuje automatsku izgradnju i konfiguraciju projekata na različitim operativnim sistemima i platformama.
+CMake je alat za upravljanje konfiguracijom i kompilacijom softvera koji se koristi za generisanje konfiguracijskih datoteka, koje opisuju proces kompilacije softverskog projekta. To znači da CMake omogućuje automatsku izgradnju i konfiguraciju projekata na različitim operativnim sistemima i platformama.
 
 CMake se sastoji od dva dijela - CMake skripte koje opisuju kompilaciju projekta i CMake generatora koji generiše datoteke za kompilaciju na osnovu CMake skripti. CMake se često koristi u projektima koji koriste više programskih jezika i biblioteka, što ga čini vrlo fleksibilnim.
 
@@ -199,8 +199,54 @@ Prednosti CMake-a uključuju:
 2) Mogućnost generisanja datoteka za kompilaciju na različitim operativnim sistemima i platformama
 3) Automatsko otkrivanje vanjskih biblioteka i njihova integracija u projekat
 4) Paralelna kompilacija projekta, što skraćuje vrijeme kompilacije
- 
- ## TL;DR
- CMake je alat za upravljanje konfiguracijom i kompilacijom softvera koji olakšava proces kompilacije projekata na različitim platformama i operativnim sistemima.
-   
 
+Evo primjera CMake skripte koja bi trebala da kompajlira VHDL fajlove iz src foldera, testbench fajl iz test foldera i pokrene testove pomoću GHDL-a:
+    
+```
+# Postavi minimalnu verziju CMake-a koja je potrebna
+cmake_minimum_required(VERSION 3.10)
+
+# Postavi ime projekta
+project(MyProject)
+
+# Postavi direktorijume u kojima se nalaze VHDL fajlovi
+set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
+set(TEST_DIR "${CMAKE_CURRENT_SOURCE_DIR}/test")
+
+# Dodaj putanju do GHDL-a
+set(GHDL_PATH "/path/to/ghdl")
+
+# Postavi ime testbench fajla
+set(TESTBENCH_FILE "testbench.vhdl")
+
+# Kompajliraj VHDL fajlove
+add_custom_target(vhdl_compile ALL
+  COMMAND ${GHDL_PATH} -a ${SRC_DIR}/*.vhd ${TEST_DIR}/${TESTBENCH_FILE}
+  DEPENDS ${SRC_DIR}/*.vhdl ${TEST_DIR}/${TESTBENCH_FILE}
+)
+
+# Izvrši testove
+add_test(
+  NAME MyTests
+  COMMAND ${GHDL_PATH} -r ${TESTBENCH_FILE} --assert-level=error --timeout=100 ns
+)
+
+# Podesi direktorijume u kojima se nalaze VHDL fajlovi
+include_directories(${SRC_DIR})
+
+# Dodaj izvršni direktorijum
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+
+```
+    
+Pretpostavimo da se nalazimo u root direktorijumu projekta, gdje se nalazi i CMakeLists.txt fajl.
+Koraci za pokretanje testova su sljedeći:
+1) Kreiranje direktorija za build:
+    `mkdir build`
+    `cd build`
+2) Pokretanje CMake komande za generisanje Makefile-a:
+    `cmake ..`
+3) Kompilacija koda pomoću Makefile-a:
+    `make`
+4) Pokretanje testova:
+    `ctest`
