@@ -127,6 +127,22 @@ U slučaju složenijih konflikata, može biti potrebno komunicirati sa kolegama 
 
 # GHDL
 
+GHDL (G Hardware Description Language) je alat za sintezu i simulaciju VHDL (VHSIC Hardware Description Language) koda. VHDL je programski jezik koji se koristi za opis hardvera u digitalnim sistemima i koristi se za projektovanje integrisanih kola (ICs), FPGA-ova, mikrokontrolera i drugih digitalnih komponenti.
+
+GHDL omogućuje sintezu VHDL koda u logički ekvivalentan hardver, što omogućuje stvarno testiranje dizajna prije implementacije na IC-u ili FPGA-u. GHDL se može koristiti kao samostalni alat ili integrisati s drugim alatima, npr. sintetizatorima.
+
+GHDL također omogućuje simulaciju VHDL koda, što omogućuje testiranje funkcionalnosti dizajna. To je posebno korisno u ranoj fazi razvoja kada je teško testirati dizajn na fizičkom hardveru.
+
+Prednosti GHDL-a uključuju:
+
+1) Mogućnost sinteze VHDL koda u hardver
+2) Integracija s drugim alatima poput sintetizatora
+3) Mogućnost simulacije VHDL koda
+4) Automatsko generisanje testbenčeva za simulaciju
+5) Podrška za veliki broj VHDL funkcija i tipova podataka
+
+GHDL je alat za sintezu i simulaciju VHDL koda koji omogućuje testiranje dizajna prije implementacije na fizičkom hardveru i olakšava razvoj digitalnih sustava.
+    
 # CMAKE
     
 CMake je alat za upravljanje konfiguracijom i izgradnjom softvera koji se koristi za generisanje konfiguracijskih datoteka, koje opisuju proces kompilacije softverskog projekta. To znači da CMake omogućuje automatsku izgradnju i konfiguraciju projekata na različitim operativnim sistemima i platformama.
