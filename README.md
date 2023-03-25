@@ -14,7 +14,8 @@ Repozitorijum na kome se postavljaju vježbe iz predmeta Digitalna elektronika.
 8) rad na vježbi
 9) `git add --all`
 10) `git commit -m "Dodajem .vhdl fajlove i testbench za vježbu N"`
-11) `git push
+11) `git push`
+    `git push origin <ime_grane> 
 12) `git checkout main
 13) `git pull
 14) `git checkout markomarkovic_grana_vjezba_1234`
