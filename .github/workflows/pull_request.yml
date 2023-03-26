@@ -14,8 +14,6 @@ jobs:
 
       - name: Install ghdl-gcc and cmake
         run: |
-          sudo add-apt-repository ppa:pgavin/ghdl -y
-          sudo apt-get update -y
           sudo apt-get install ghdl-gcc cmake -y
       - name: Build
         run: |
