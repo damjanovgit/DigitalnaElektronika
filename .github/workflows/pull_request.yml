@@ -1,17 +1,27 @@
-on: pull_request
-name: Pull Request job
+on: [pull_request]
+name: Build and Test
 jobs:
-  validate-tests:
-    name: Prvi test
-    runs-on: self-hosted
-    steps:
-    - name: Checkout 1.
+  build-and-test:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Checkout code
       uses: actions/checkout@main
-    - name: Kompajliram kod
+
+    - name: Install ghdl-gcc and cmake
       run: |
-        echo "Unutar ovo fajla"
-        ls
-        echo Hello
-        ls ..
-        echo Kraj
-        exit 1
+        sudo add-apt-repository ppa:pgavin/ghdl -y
+        sudo apt-get update -y
+        sudo apt-get install ghdl-gcc cmake -y
+
+    - name: Build
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        cmake --build .
+
+    - name: Test
+      run: |
+        cd build
+        cmake --build .
+        ctest -C Release
