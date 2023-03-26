@@ -204,42 +204,34 @@ Prednosti CMake-a uključuju:
 3) Automatsko otkrivanje vanjskih biblioteka i njihova integracija u projekat
 4) Paralelna kompilacija projekta, što skraćuje vrijeme kompilacije
 
-Evo primjera CMake skripte koja bi trebala da kompajlira VHDL fajlove iz src foldera, testbench fajl iz test foldera i pokrene testove pomoću GHDL-a:
+Evo primjera CMake skripte koja bi trebala da kompajlira VHDL fajlove pokrene testove pomoću GHDL-a:
     
 ```
-# Postavi minimalnu verziju CMake-a koja je potrebna
-cmake_minimum_required(VERSION 3.10)
 
-# Postavi ime projekta
-project(MyProject)
+cmake_minimum_required(VERSION 3.12)
 
-# Postavi direktorijume u kojima se nalaze VHDL fajlovi
-set(SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
-set(TEST_DIR "${CMAKE_CURRENT_SOURCE_DIR}/test")
 
-# Dodaj putanju do GHDL-a
-set(GHDL_PATH "/path/to/ghdl")
+project(half_adder)
 
-# Postavi ime testbench fajla
-set(TESTBENCH_FILE "testbench.vhdl")
-
-# Kompajliraj VHDL fajlove
-add_custom_target(vhdl_compile ALL
-  COMMAND ${GHDL_PATH} -a ${SRC_DIR}/*.vhd ${TEST_DIR}/${TESTBENCH_FILE}
-  DEPENDS ${SRC_DIR}/*.vhdl ${TEST_DIR}/${TESTBENCH_FILE}
+set(SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/half_adder.vhdl
+    ${CMAKE_CURRENT_SOURCE_DIR}/half_adder_tb.vhdl
 )
 
-# Izvrši testove
+add_library(${PROJECT_NAME} SHARED ${SOURCES})
+
+add_custom_command(
+    TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ghdl-gcc ARGS -a ${SOURCES}
+    COMMAND ghdl-gcc -e half_adder_tb
+)
+
 add_test(
-  NAME MyTests
-  COMMAND ${GHDL_PATH} -r ${TESTBENCH_FILE} --assert-level=error --timeout=100 ns
+    NAME ${PROJECT_NAME}_test
+    COMMAND ./half_adder_tb
 )
 
-# Podesi direktorijume u kojima se nalaze VHDL fajlovi
-include_directories(${SRC_DIR})
-
-# Dodaj izvršni direktorijum
-set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 ```
     
@@ -253,6 +245,9 @@ Koraci za pokretanje testova su sljedeći:
 2) Pokretanje CMake komande za generisanje Makefile-a:
     `cmake ..`
 3) Kompilacija koda pomoću Makefile-a:
-    `make`
+    `cmake --build .`
 4) Pokretanje testova:
-    `ctest`
+    `ctest -C Release`
+    
+Primjer iz damjanp direktorijuma će raditi samo na Linuks operativnom sistemu sa CMake-om i potrebno je ovo podesiti radi automatskog izvršenja testova na repozitorijumu.
+Da biste instalirali ghdl na Linux operativnom sistemu dovoljno je u terminalu unijeti: sudo apt-get install ghdl-gcc
