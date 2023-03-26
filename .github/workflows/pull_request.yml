@@ -7,26 +7,22 @@ on:
 
 jobs:
   build-and-test:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@main
 
-    - name: Install ghdl-gcc and cmake
-      run: |
-        sudo add-apt-repository ppa:pgavin/ghdl -y
-        sudo apt-get update -y
-        sudo apt-get install ghdl-gcc cmake -y
-
-    - name: Build
-      run: |
-        mkdir build
-        cd build
-        cmake ..
-        cmake --build .
-
-    - name: Test
-      run: |
-        cd build
-        cmake --build .
-        ctest -C Release
+      - name: Install ghdl-gcc and cmake
+        run: |
+          sudo apt-get install ghdl-gcc cmake -y
+      - name: Build
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          cmake --build .
+      - name: Test
+        run: |
+          cd build
+          cmake --build .
+          ctest -C Release
