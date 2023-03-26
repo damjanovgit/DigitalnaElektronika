@@ -249,5 +249,5 @@ Koraci za pokretanje testova su sljedeći:
 4) Pokretanje testova:
     `ctest -C Release`
     
-Primjer iz damjanp direktorijuma će raditi samo na Linuks operativnom sistemu sa CMake-om i potrebno je ovo podesiti radi automatskog izvršenja testova na repozitorijumu.
+**Primjer iz damjanp direktorijuma će raditi samo na Linuks operativnom sistemu sa CMake-om i ovo je potrebno podesiti radi automatskog izvršenja testova na repozitorijumu.**
 Da biste instalirali ghdl na Linux operativnom sistemu dovoljno je u terminalu unijeti: sudo apt-get install ghdl-gcc
