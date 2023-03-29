@@ -1,6 +1,7 @@
 # DigitalnaElektronika
 
 Token za pristup izmjenama repozitorijumu je: **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**
+
 (koristite ovaj niz karaktera kada pokušate pushovati stvari na repozorijum i od vas se zatraži lozinka)
 
 Repozitorijum za vježbe iz digitalne elektronike je mjesto na kojem se čuvaju VHDL fajlovi i testbenchevi sa vježbi koje se odvijaju u okviru predmeta Digitalna elektronika. Ovaj repozitorijum omogućava studentima pristup kodu i testovima, kao i rad na istom.
