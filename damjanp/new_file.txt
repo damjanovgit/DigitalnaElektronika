@@ -1,5 +1,5 @@
 Hello!
-I just added a new textual file. It's reallz nice!
+I just added a new textual file. It's really nice!
 Please approve my Pull Request so the file keeps living in this repository.
 
 Cheers!
