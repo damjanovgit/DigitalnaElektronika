@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 
-project(flipflops)
+project(flipflopproject)
 
 set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/D_flipflop.vhdl
