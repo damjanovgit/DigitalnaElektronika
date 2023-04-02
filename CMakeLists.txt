@@ -5,4 +5,4 @@ enable_testing()
 
 project(TOP_LEVEL_PROJECT)
 
-add_subdirectory(damjanp)
+add_subdirectory(mihajlodj1219_19)
