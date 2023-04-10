@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 
-project(flipflopproject)
+project(ranko1)
 
 set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/d_ff.VHDL
