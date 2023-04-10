@@ -27,19 +27,19 @@ add_custom_command(
 
 add_test(
     NAME D_flipflop_tb_test_ranko
-    COMMAND ./d_flipflop_tb
+    COMMAND ./d_ff_testbench
 )
 add_test(
     NAME T_flipflop_tb_test_ranko
-    COMMAND ./t_flipflop_tb
+    COMMAND ./t_ff_testbench
 )
 add_test(
     NAME RS_flipflop_tb_test_ranko
-    COMMAND ./rs_flipflop_tb
+    COMMAND ./rs_testbench
 )
 add_test(
     NAME JK_flipflop_tb_test_ranko
-    COMMAND ./jk_flipflop_tb
+    COMMAND ./jk_ff_testbench
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
