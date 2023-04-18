@@ -27,19 +27,19 @@ add_custom_command(
 
 add_test(
     NAME D_FF_tb_test_stefanb1221_18
-    COMMAND ./D_FF_tb.vhdl
+    COMMAND ./d_ff_tb
 )
 add_test(
     NAME T_FF_tb_test_stefanb1221_18
-    COMMAND ./T_FF_tb.vhdl
+    COMMAND ./t_ff_tb
 )
 add_test(
     NAME RS_FF_tb_test_stefanb1221_18
-    COMMAND ./RS_FF_tb.vhdl
+    COMMAND ./rs_ff_tb
 )
 add_test(
     NAME JK_FF_tb_test_stefanb1221_18
-    COMMAND ./JK_FF_tb.vhdl
+    COMMAND ./jk_ff_tb
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
