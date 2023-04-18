@@ -12,7 +12,7 @@ architecture behavior of D_FF_tb is
         );
     end component;
 
-    signal D_in, CP_in, Q_out, Qn_out : std_logic;
+    signal D_in, CP_in, Q_out, Qn_out : std_logic := '0';
 
 begin
 

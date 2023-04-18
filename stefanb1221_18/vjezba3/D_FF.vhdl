@@ -9,7 +9,7 @@ entity D_FF is
 end D_FF;
 
 architecture behavior of D_FF is
-signal tmp : std_logic;
+signal tmp : std_logic := '0';
 begin
     process(CP)
     begin
