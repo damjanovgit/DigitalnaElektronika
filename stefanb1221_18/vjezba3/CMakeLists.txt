@@ -27,7 +27,7 @@ add_custom_command(
 
 add_test(
     NAME D_FF_tb_test_stefanb1221_18
-    COMMAND ./ D_FF_tb
+    COMMAND ./D_FF_tb
 )
 add_test(
     NAME T_FF_tb_test_stefanb1221_18
