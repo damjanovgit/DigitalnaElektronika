@@ -24,15 +24,15 @@ add_custom_command(
 
 add_test(
     NAME dekadni_brojac_test_mihajlo_djukic
-    COMMAND ./Dekadni_brojac_tb
+    COMMAND ./dekadni_brojac_tb
 )
 add_test(
     NAME pomjeracki_registar_test_mihajlo_djukic
-    COMMAND ./Pomjeracki_registar_tb
+    COMMAND ./pomjeracki_registar_tb
 )
 add_test(
     NAME stac_registar_test_mihajlo_djukic
-    COMMAND ./Stac_registar_tb
+    COMMAND ./stac_registar_tb
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
