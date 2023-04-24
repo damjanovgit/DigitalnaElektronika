@@ -9,5 +9,7 @@ add_subdirectory(mihajlodj1219_19)
 add_subdirectory(damjanp)
 add_subdirectory(lukav11102_21)
 add_subdirectory(ranko11103)
+add_subdirectory(stefanb1221_18)
 add_subdirectory(daniloc1129_18)
+
 
