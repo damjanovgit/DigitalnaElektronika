@@ -1,5 +1,9 @@
 # DigitalnaElektronika
 
+U slučaju da ne možete pristupiti repozitoijumu zbog toga što vam lozinka nije prihvaćena prilikom pokušaja git push komande potrebno je da generišete svoj token i koristite ga umjesto lozinke.
+
+Tutorijal kako to da uradite možete pogledati [ovdje](https://catalyst.zoho.com/help/tutorials/githubbot/generate-access-token.html)
+
 Repozitorijum za vježbe iz digitalne elektronike je mjesto na kojem se čuvaju VHDL fajlovi i testbenchevi sa vježbi koje se odvijaju u okviru predmeta Digitalna elektronika. Ovaj repozitorijum omogućava studentima pristup kodu i testovima, kao i rad na istom.
 
 Studenti mogu preuzeti fajlove iz repozitorijuma i raditi na njima lokalno, nakon čega mogu postaviti izmijenjene fajlove nazad na repozitorijum. Takođe, repozitorijum omogućava saradnju između studenata, tako da mogu raditi zajedno na istim fajlovima i međusobno dijeliti izmjene.
