@@ -1,0 +1,71 @@
+$date
+  Sat Apr 15 16:46:38 2023
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module d_testbench $end
+$var reg 1 ! d_in $end
+$var reg 1 " clk_in $end
+$var reg 1 # q_out $end
+$var reg 1 $ nq_out $end
+$scope module dut $end
+$var reg 1 % d $end
+$var reg 1 & clk $end
+$var reg 1 ' q $end
+$var reg 1 ( nq $end
+$var reg 1 ) outp $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+0!
+0"
+0#
+1$
+0%
+0&
+0'
+1(
+0)
+#1000000
+#2000000
+#3000000
+1!
+1%
+#4000000
+#5000000
+#6000000
+1"
+1&
+1)
+#7000000
+0"
+1#
+0$
+0&
+1'
+0(
+#8000000
+#9000000
+0!
+1"
+0%
+1&
+0)
+#10000000
+0"
+0#
+1$
+0&
+0'
+1(
+#11000000
+#12000000
