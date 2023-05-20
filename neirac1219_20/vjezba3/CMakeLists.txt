@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 
-project(flipflopovi)
+project(flipflop1219)
 
 set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/DFF.vhdl
@@ -26,19 +26,19 @@ add_custom_command(
 )
 
 add_test(
-    NAME DFF_TB_test_Neira_Cehic
+    NAME ${PROJECT_NAME}_test_DFF_TB_Neira_Cehic
     COMMAND ./dff_tb
 )
 add_test(
-    NAME TFF_TB_test_Neira_Cehic
+    NAME ${PROJECT_NAME}_test_TFF_TB_Neira_Cehic
     COMMAND ./tff_tb
 )
 add_test(
-    NAME RSFF_TB_test_Neira_Cehic
+    NAME ${PROJECT_NAME}_test_RSFF_TB_Neira_Cehic
     COMMAND ./rsff_tb
 )
 add_test(
-    NAME JKFF_TB_test_Neira_Cehic
+    NAME ${PROJECT_NAME}_test_JKFF_TB_Neira_Cehic
     COMMAND ./jkff_tb
 )
 
