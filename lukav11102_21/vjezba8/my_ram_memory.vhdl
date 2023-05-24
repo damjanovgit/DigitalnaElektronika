@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 
 entity my_ram_memory is
     generic(
-        ADDR_SIZE : integer := 4;
+        ADDR_SIZE : integer := 7;
         WORD_SIZE : integer := 8
     );
     port(
@@ -35,5 +35,5 @@ begin
     end process;
 end my_ram_memory_beh;
 
--- Posto je u tekstu zadatka data velicina RAM memorije od 128b, mozemo uzeti da je velicina memorijske rijeci 8b sto znaci da cemo onda imati 16 
--- ukupnih memorijskih lokacija, pa su nam potrebne adrese od 4b da bi ove lokacije adresirali.
+-- Posto je u tekstu zadatka data velicina RAM memorije od 128B, mozemo uzeti da je velicina memorijske rijeci 1B sto znaci da cemo onda imati 128 
+-- ukupnih memorijskih lokacija, pa su nam potrebne adrese od 7b da bi ove lokacije adresirali.
