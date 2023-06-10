@@ -27,19 +27,19 @@ add_custom_command(
 
 add_test(
     NAME D_FlipFlop_TB_test
-    COMMAND ./d_flipflop_tb
+    COMMAND ./D_FlipFlop_TB
 )
 add_test(
     NAME T_FlipFlop_TB_test
-    COMMAND ./t_flipflop_tb
+    COMMAND ./T_FlipFlop_TB
 )
 add_test(
     NAME RS_FlipFlop_TB_test
-    COMMAND ./rs_flipflop_tb
+    COMMAND ./RS_FlipFlop_TB
 )
 add_test(
     NAME JK_FlipFlop_TB_test
-    COMMAND ./jk_flipflop_tb
+    COMMAND ./JK_FlipFlop_TB
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
