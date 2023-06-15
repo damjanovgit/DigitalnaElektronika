@@ -23,15 +23,15 @@ add_custom_command(
 
 add_test(
     NAME Register10bit_TB_test
-    COMMAND ./Register10bit_TB
+    COMMAND ./register10bit_tb
 )
 add_test(
     NAME Shift_Register_TB_test
-    COMMAND ./Shift_Register_TB
+    COMMAND ./shift_register_tb
 )
 add_test(
     NAME Decimal_Counter_TB_test
-    COMMAND ./Decimal_Counter_TB
+    COMMAND ./decimal_counter_tb
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
