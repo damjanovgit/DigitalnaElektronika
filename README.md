@@ -1,3 +1,5 @@
+##### DODANA SU DVA PDF FAJLA U KOJIMA SU PODIJELJENA PO DVA PROJEKTNA ZADATKA ZA SVAKOG STUDENTA. MOLIM DA SVAKO PROČITA SVOJ ZADATAK I STUPI U IZRADU. NA PISMENI ISPIT SE NE MOŽE IZAĆI BEZ URAĐENIH SVIH LABORATORIJSKIH VJEŽBI I PROJEKTNIH ZADATAKA.
+
 # DigitalnaElektronika
 
 U slučaju da ne možete pristupiti repozitoijumu zbog toga što vam lozinka nije prihvaćena prilikom pokušaja git push komande potrebno je da generišete svoj token i koristite ga umjesto lozinke.
