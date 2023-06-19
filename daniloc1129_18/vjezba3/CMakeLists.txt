@@ -41,5 +41,4 @@ add_test(
     NAME JK_FlipFlop_TB_test
     COMMAND ./jk_flipflop_tb
 )
-
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
