@@ -1,0 +1,69 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity d_flipflop_tb is
+end entity d_flipflop_tb;
+
+architecture behavioral of d_flipflop_tb is
+    -- Komponenta koja se testira
+    component d_flipflop
+        port (
+            d : in std_logic;
+            clk : in std_logic;
+            reset : in std_logic;
+            q : out std_logic
+        );
+    end component;
+
+    -- Signali za testiranje
+    signal d_sig, clk_sig, reset_sig, q_sig : std_logic;
+
+     constant CLOCK_PERIOD : time := 10 ns;  -- Perioda takta
+
+begin
+    dut: d_flipflop
+        port map (
+            d => d_sig,
+            clk => clk_sig,
+            reset => reset_sig,
+            q => q_sig
+        );
+
+    clk_process: process
+    begin
+        while now < 50 ns loop  
+            clk_sig <= '0';
+            wait for CLOCK_PERIOD/4;
+            clk_sig <= '1';
+            wait for CLOCK_PERIOD/4;
+        end loop;
+        wait;
+    end process;
+
+    stimulus_process: process
+    begin
+        -- Inicijalizacija ulaza
+        d_sig <= '0';
+        reset_sig <= '0';
+        wait for 5 ns;
+
+        -- Promjena ulaza
+        d_sig <= '1';
+        wait for 10 ns;
+
+        d_sig <= '1';
+        wait for 10 ns;
+
+        d_sig <= '0';
+        wait for 10 ns;
+
+        d_sig <= '1';
+        wait for 10 ns;
+
+        --Resetovanje
+        reset_sig <= '1';
+
+        wait;
+    end process;
+
+end architecture behavioral;
