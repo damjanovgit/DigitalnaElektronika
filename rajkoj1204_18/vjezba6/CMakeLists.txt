@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 
-project(registri i brojaci)
+project(registri_i_brojaci)
 
 set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/dekadniBrojac.vhdl
@@ -24,16 +24,16 @@ add_custom_command(
 )
 
 add_test(
-    NAME dekadniBrojac
-    COMMAND ./DekadniBrojac_TB
+    NAME dekadniBrojac_test
+    COMMAND ./dekadniBrojac_Tb
 )
 add_test(
-    NAME pomjerackiRegistar
-    COMMAND ./PomjerackiRegistar_TB
+    NAME pomjerackiRegistar_test
+    COMMAND ./pomjerackiRegistar_tb
 )
 add_test(
-    NAME stacionarniRegistar
-    COMMAND ./stacionarniRegistar_tb
+    NAME stacionarniRegistar_test
+    COMMAND ./stacionarniRegistar_Tb
 )
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
