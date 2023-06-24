@@ -1,0 +1,85 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity PomjerackiRegistar_TB is
+end entity PomjerackiRegistar_TB;
+
+architecture Behavioral of PomjerackiRegistar_TB is
+    component PomjerackiRegistar is
+        port (
+            clk   : in  std_logic;
+            rin, lin : in  std_logic;
+            reset : in  std_logic;
+            mode  : in  std_logic_vector(1 downto 0);
+            data  : in  std_logic_vector(5 downto 0);
+            output     : out std_logic_vector(5 downto 0)
+        );
+    end component PomjerackiRegistar;
+
+    signal clk_tb     : std_logic := '0';
+    signal lin_tb     : std_logic := '0';
+    signal rin_tb     : std_logic := '0';
+    signal reset_tb   : std_logic := '1';
+    signal mode_tb    : std_logic_vector(1 downto 0) := "00";
+    signal data_tb    : std_logic_vector(5 downto 0) := (others => '0');
+    signal output_tb       : std_logic_vector(5 downto 0);
+
+    constant CLOCK_PERIOD : time := 10 ns;  -- Perioda takta
+
+begin
+    uut: PomjerackiRegistar
+        port map (
+            clk   => clk_tb,
+            lin   => lin_tb,
+            rin   => rin_tb,
+            reset => reset_tb,
+            mode  => mode_tb,
+            data  => data_tb,
+            output     => output_tb
+        );
+
+    -- Generisanje takta
+    clk_process: process
+    begin
+        while now < 100 ns loop  -- Simulacija traje 100 ns
+            clk_tb <= '0';
+            wait for CLOCK_PERIOD / 2;
+            clk_tb <= '1';
+            wait for CLOCK_PERIOD / 2;
+        end loop;
+        wait;
+    end process;
+
+    -- Testni stimulus
+    stimulus_process: process
+    begin
+
+         -- Upisi podatke (101010) (mode = "10")
+        mode_tb <= "10";
+        data_tb <= "101010";
+        wait for 2 * CLOCK_PERIOD;
+
+        -- Pomjeri ulijevo, dodaj binarnu jedinicu (mode = "00")
+        mode_tb <= "00";
+        lin_tb <= '1';
+        wait for 2 * CLOCK_PERIOD;
+
+         -- Pomjeri udesno, dodaj binarnu nulu (mode = "01")
+        mode_tb <= "01";
+        rin_tb <= '0';
+        wait for 2 * CLOCK_PERIOD;
+
+         -- Ukljuci cuvanje prethodne vrijednosti (mode = "11")
+        mode_tb <= "11";
+        wait for 2 * CLOCK_PERIOD;
+
+        -- Aktiviraj asinhroni reset
+        reset_tb <= '0';
+
+        -- Pricekaj takt ciklus
+        wait for CLOCK_PERIOD;
+
+        wait;
+    end process;
+
+end architecture Behavioral;
