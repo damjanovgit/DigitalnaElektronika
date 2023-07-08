@@ -2,17 +2,17 @@
 cmake_minimum_required(VERSION 3.12)
 
 
-project(flipflopovi)
+project(flip_flopovi)
 
 set(SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/d_flipflop.vhdl
-    ${CMAKE_CURRENT_SOURCE_DIR}/d_flipflop_tb.vhdl
-    ${CMAKE_CURRENT_SOURCE_DIR}/jk_FlipFlop.vhdl
-    ${CMAKE_CURRENT_SOURCE_DIR}/jk_flipflop_tb.vhdl
-    ${CMAKE_CURRENT_SOURCE_DIR}/rs_FlipFlop.vhdl
-    ${CMAKE_CURRENT_SOURCE_DIR}/rs_flipflop_tb.vhdl
-    ${CMAKE_CURRENT_SOURCE_DIR}/t_flipflop.vhdl
-    ${CMAKE_CURRENT_SOURCE_DIR}/t_flipflop_tb.vhdl
+    ${CMAKE_CURRENT_SOURCE_DIR}/d_flipflop.vhdl.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/d_flipflop_tb.vhdl.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/jk_FlipFlop.vhdl.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/jk_flipflop_tb.vhdl.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/rs_FlipFlop.vhdl.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/rs_flipflop_tb.vhdl.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/t_flipflop.vhdl.txt
+    ${CMAKE_CURRENT_SOURCE_DIR}/t_flipflop_tb.vhdl.txt
 )
 
 add_library(${PROJECT_NAME} SHARED ${SOURCES})
