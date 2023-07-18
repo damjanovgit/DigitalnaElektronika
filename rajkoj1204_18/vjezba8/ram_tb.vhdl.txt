@@ -1,0 +1,93 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity RAM_TB is
+end RAM_TB;
+
+architecture Behavioral of RAM_TB is
+  constant ADDR_WIDTH : integer := 7;
+  constant DATA_WIDTH : integer := 8;
+  
+  signal clk      : std_logic := '0';
+  signal enable_wr   : std_logic := '0';
+  signal address  : std_logic_vector(ADDR_WIDTH - 1 downto 0) := (others => '0');
+  signal data_in  : std_logic_vector(DATA_WIDTH - 1 downto 0) := (others => '0');
+  signal data_out : std_logic_vector(DATA_WIDTH - 1 downto 0);
+
+  component RAM is
+    generic (
+      ADDR_WIDTH : integer := 7;
+      DATA_WIDTH : integer := 8
+    );
+    port (
+      clk      : in std_logic;
+      enable_wr   : in std_logic;
+      address  : in std_logic_vector(ADDR_WIDTH - 1 downto 0);
+      data_in  : in std_logic_vector(DATA_WIDTH - 1 downto 0);
+      data_out : out std_logic_vector(DATA_WIDTH - 1 downto 0)
+    );
+  end component;
+
+begin
+  dut: RAM
+    generic map (
+      ADDR_WIDTH => ADDR_WIDTH,
+      DATA_WIDTH => DATA_WIDTH
+    )
+    port map (
+      clk      => clk,
+      enable_wr   => enable_wr,
+      address  => address,
+      data_in  => data_in,
+      data_out => data_out
+    );
+
+  process
+  begin
+    -- Inicijalizacija
+    enable_wr <= '0';
+    address <= (others => '0');
+    data_in <= (others => '0');
+    
+    
+    -- Upis podataka u RAM
+    enable_wr <= '1';
+    address <= "0000001"; -- Adresa 1
+    data_in <= "10101011";
+    wait for 10 ns;
+    
+    enable_wr <= '1';
+    address <= "0000011"; -- Adresa 3
+    data_in <= "00010110";
+    wait for 10 ns;
+
+    -- Citanje podataka iz RAM-a nakon upisa
+    enable_wr <= '0';
+    address <= "0000001"; -- Adresa 1
+    wait for 10 ns;
+    assert data_out = "10101011" report "Greska u citanju podataka na adresi 1 nakon upisa" severity error;
+    
+    address <= "0000011"; -- Adresa 3
+    wait for 10 ns;
+    assert data_out = "00010110" report "Greska u citanju podataka na adresi 3 nakon upisa" severity error;
+    
+    -- Resetovanje
+    enable_wr <= '0';
+    address <= (others => '0');
+    data_in <= (others => '0');
+    
+    wait;
+  end process;
+
+  clk_process: process
+  begin
+    while now < 100 ns loop
+      clk <= '0';
+      wait for 5 ns;
+      clk <= '1';
+      wait for 5 ns;
+    end loop;
+    wait;
+  end process clk_process;
+
+end Behavioral;

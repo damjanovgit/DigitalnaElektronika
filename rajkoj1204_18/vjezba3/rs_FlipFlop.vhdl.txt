@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity rs_flipflop is
+    port (
+        reset : in std_logic;
+        set : in std_logic;
+        q : out std_logic;
+        q_bar : out std_logic
+    );
+end entity rs_flipflop;
+
+architecture behavioral of rs_flipflop is
+begin
+    process(reset, set)
+    begin
+        if (reset = '1') then
+            q <= '0';
+            q_bar <= '1';
+        elsif (set = '1') then
+            q <= '1';
+            q_bar <= '0';
+        end if;
+    end process;
+end architecture behavioral;
