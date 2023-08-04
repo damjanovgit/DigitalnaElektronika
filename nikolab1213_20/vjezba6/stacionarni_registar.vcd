@@ -1,0 +1,108 @@
+$date
+  Thu Aug  3 12:53:25 2023
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module stacionarni_registar_testbench $end
+$var reg 10 ! data_in1[9:0] $end
+$var reg 10 " data_out1[9:0] $end
+$var reg 1 # enable1 $end
+$var reg 1 $ clk1 $end
+$var reg 1 % clr1 $end
+$scope module dut $end
+$var reg 10 & data_in[9:0] $end
+$var reg 10 ' data_out[9:0] $end
+$var reg 1 ( enable $end
+$var reg 1 ) clk $end
+$var reg 1 * clr $end
+$var reg 10 + stanje[9:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b0000000000 !
+b0000000000 "
+0#
+0$
+0%
+b0000000000 &
+b0000000000 '
+0(
+0)
+0*
+b0000000000 +
+#1000000
+#2000000
+b0000000001 !
+1#
+1$
+b0000000001 &
+1(
+1)
+b0000000001 +
+#3000000
+b0000000001 "
+0$
+b0000000001 '
+0)
+#4000000
+#5000000
+b1000000000 !
+1$
+1%
+b1000000000 &
+1)
+1*
+b0000000000 +
+#6000000
+b0000000000 "
+0$
+b0000000000 '
+0)
+#7000000
+#8000000
+b1000000001 !
+1$
+0%
+b1000000001 &
+1)
+0*
+b1000000001 +
+#9000000
+b1000000001 "
+0$
+b1000000001 '
+0)
+#10000000
+#11000000
+b1111111111 !
+0#
+1$
+b1111111111 &
+0(
+1)
+#12000000
+0$
+0)
+#13000000
+#14000000
+1$
+1%
+1)
+1*
+b0000000000 +
+#15000000
+b0000000000 "
+0$
+b0000000000 '
+0)
+#16000000
+#17000000
