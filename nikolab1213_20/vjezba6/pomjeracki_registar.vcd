@@ -1,0 +1,129 @@
+$date
+  Thu Aug  3 13:36:44 2023
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module pomjeracki_registar_testbench $end
+$var reg 6 ! data_in1[5:0] $end
+$var reg 6 " data_out1[5:0] $end
+$var reg 2 # mode1[1:0] $end
+$var reg 1 $ clk1 $end
+$var reg 1 % clr1 $end
+$var reg 1 & rin1 $end
+$var reg 1 ' lin1 $end
+$scope module dut $end
+$var reg 6 ( data_in[5:0] $end
+$var reg 6 ) data_out[5:0] $end
+$var reg 2 * mode[1:0] $end
+$var reg 1 + clk $end
+$var reg 1 , clr $end
+$var reg 1 - rin $end
+$var reg 1 . lin $end
+$var reg 6 / stanje[5:0] $end
+$var reg 6 0 staro_stanje[5:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b000000 !
+b000000 "
+b00 #
+0$
+1%
+0&
+0'
+b000000 (
+b000000 )
+b00 *
+0+
+1,
+0-
+0.
+b000000 /
+b000000 0
+#1000000
+#2000000
+b100001 !
+b100001 "
+b11 #
+1$
+b100001 (
+b100001 )
+b11 *
+1+
+b100001 /
+#3000000
+0$
+0+
+b100001 0
+#4000000
+b010000 "
+b01 #
+1$
+b010000 )
+b01 *
+1+
+b010000 /
+#5000000
+0$
+0+
+b010000 0
+#6000000
+b101000 "
+1$
+1&
+b101000 )
+1+
+1-
+b101000 /
+#7000000
+0$
+0+
+b101000 0
+#8000000
+b010000 "
+b10 #
+1$
+0&
+b010000 )
+b10 *
+1+
+0-
+b010000 /
+#9000000
+0$
+0+
+b010000 0
+#10000000
+b100001 "
+1$
+1'
+b100001 )
+1+
+1.
+b100001 /
+#11000000
+0$
+0+
+b100001 0
+#12000000
+b000000 "
+1$
+0%
+b000000 )
+1+
+0,
+b000000 /
+#13000000
+0$
+0+
+b000000 0
+#14000000
