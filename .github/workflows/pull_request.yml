@@ -11,7 +11,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@main
-
+      - name: Update
+        run: |
+          sudo apt-get update
       - name: Install ghdl-gcc and cmake
         run: |
           sudo apt-get install ghdl-gcc cmake -y

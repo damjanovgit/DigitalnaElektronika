@@ -1,0 +1,99 @@
+$date
+  Fri Aug  4 14:48:44 2023
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module dekadni_brojac_testbench $end
+$var reg 4 ! data_out1[3:0] $end
+$var reg 1 " clk1 $end
+$var reg 1 # rst1 $end
+$var reg 1 $ mode1 $end
+$scope module dut $end
+$var reg 4 % data_out[3:0] $end
+$var reg 1 & clk $end
+$var reg 1 ' rst $end
+$var reg 1 ( mode $end
+$comment proslo_stanje is not handled $end
+$comment sljedece_stanje is not handled $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b0000 !
+0"
+0#
+0$
+b0000 %
+0&
+0'
+0(
+#1000000
+#2000000
+b0001 !
+1"
+b0001 %
+1&
+#3000000
+0"
+0&
+#4000000
+b0010 !
+1"
+b0010 %
+1&
+#5000000
+0"
+1$
+0&
+1(
+#6000000
+b0001 !
+1"
+b0001 %
+1&
+#7000000
+0"
+0&
+#8000000
+b0000 !
+1"
+b0000 %
+1&
+#9000000
+0"
+0&
+#10000000
+b1001 !
+1"
+b1001 %
+1&
+#11000000
+0"
+0&
+#12000000
+b1000 !
+1"
+b1000 %
+1&
+#13000000
+0"
+1#
+0&
+1'
+#14000000
+b0000 !
+1"
+b0000 %
+1&
+#15000000
+0"
+0&
+#16000000
