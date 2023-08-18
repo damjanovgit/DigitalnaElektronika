@@ -4,3 +4,4 @@ project(nikolababic)
 
 add_subdirectory(vjezba3)
 add_subdirectory(vjezba6)
+add_subdirectory(vjezba8)
