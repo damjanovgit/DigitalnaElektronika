@@ -1,0 +1,19 @@
+v 4
+file . "dekadni_brojac_tb.vhdl" "ee79569b3602d475385538c2ee7d2283358f351b" "20230804124841.187":
+  entity dekadni_brojac_testbench at 1( 0) + 0 on 81;
+  architecture dekadni_brojac_tb of dekadni_brojac_testbench at 7( 110) + 0 on 82;
+file . "dekadni_brojac.vhdl" "fe8f244d4fe5de8b0f7518a408b0faba7b018603" "20230804124839.679":
+  entity dekadni_brojac at 1( 0) + 0 on 79;
+  architecture dekadni_brojac_beh of dekadni_brojac at 11( 183) + 0 on 80;
+file . "pomjeracki_registar.vhdl" "da4e99085f5866db1e249dab70a07d0760cd4723" "20230803112201.135":
+  entity pomjeracki_registar at 1( 0) + 0 on 25;
+  architecture pomjeracki_registar_beh of pomjeracki_registar at 13( 288) + 0 on 26;
+file . "stacionarni_registar_tb.vhdl" "b6ff11ed09c84122547bdf4bedb01681fa0e80dc" "20230803105318.924":
+  entity stacionarni_registar_testbench at 1( 0) + 0 on 23;
+  architecture stacionarni_registar_tb of stacionarni_registar_testbench at 7( 122) + 0 on 24;
+file . "stacionarni_registar.vhdl" "fe33c8afb3fd05119198ef7fb20a941a8c1e1b6b" "20230803104747.016":
+  entity stacionarni_registar at 1( 0) + 0 on 19;
+  architecture stacionarni_registar_beh of stacionarni_registar at 12( 243) + 0 on 20;
+file . "pomjeracki_registar_tb.vhdl" "e1d28e8bdf2b39fda5a581b03946373b2751d759" "20230803113641.019":
+  entity pomjeracki_registar_testbench at 1( 0) + 0 on 31;
+  architecture pomjeracki_registar_tb of pomjeracki_registar_testbench at 7( 120) + 0 on 32;
