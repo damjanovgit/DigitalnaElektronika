@@ -1,0 +1,7 @@
+v 4
+file . "tb_Dekadnibrojac.vhdl" "0a28b1f432cf855dd41578d3e237556aa353c73c" "20230912114626.008":
+  entity tb at 1( 0) + 0 on 13;
+  architecture tb of tb at 7( 72) + 0 on 14;
+file . "Dekadnibrojac.vhdl" "94efc4ade88327b6172a3ab166955f6569ea0ba1" "20230912114613.829":
+  entity dekadnibrojac at 1( 0) + 0 on 11;
+  architecture behavioral of dekadnibrojac at 12( 234) + 0 on 12;
