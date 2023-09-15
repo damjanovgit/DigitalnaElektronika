@@ -42,4 +42,4 @@ add_test(
     COMMAND ./jk_testbench
 )
 
-set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
