@@ -1,7 +1,0 @@
-v 4
-file . "tb_stacionarni_reg.vhdl" "ad7ae4696fbaaf5aff6e559f3c9e3324462e4bea" "20230912123956.629":
-  entity tb_stacionarni_reg at 1( 0) + 0 on 17;
-  architecture tb of tb_stacionarni_reg at 7( 104) + 0 on 18;
-file . "stacionarni_reg.vhdl" "1ca817e5c3b0a680464700228ec0fade29d226ed" "20230912123944.240":
-  entity stacionarni_reg at 1( 0) + 0 on 15;
-  architecture stacionarni_reg_beh of stacionarni_reg at 12( 265) + 0 on 16;
