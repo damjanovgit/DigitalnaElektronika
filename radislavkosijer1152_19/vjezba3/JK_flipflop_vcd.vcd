@@ -1,0 +1,83 @@
+$date
+  Wed Sep 13 14:21:23 2023
+$end
+$version
+  GHDL v0
+$end
+$timescale
+  1 fs
+$end
+$scope module standard $end
+$upscope $end
+$scope module std_logic_1164 $end
+$upscope $end
+$scope module jk_flipflop_tb $end
+$var reg 1 ! j_in $end
+$var reg 1 " k_in $end
+$var reg 1 # clk_in $end
+$var reg 1 $ q_out $end
+$var reg 1 % nq_out $end
+$scope module dut $end
+$var reg 1 & j $end
+$var reg 1 ' k $end
+$var reg 1 ( clk $end
+$var reg 1 ) q $end
+$var reg 1 * nq $end
+$var reg 1 + temp $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+1!
+0"
+1#
+1$
+0%
+1&
+0'
+1(
+1)
+0*
+1+
+#1000000
+0#
+0(
+#2000000
+0!
+1"
+1#
+0&
+1'
+1(
+#3000000
+0#
+0$
+1%
+0(
+0)
+1*
+0+
+#4000000
+0"
+1#
+0'
+1(
+#5000000
+0#
+0(
+#6000000
+1!
+1"
+1#
+1&
+1'
+1(
+#7000000
+0#
+1$
+0%
+0(
+1)
+0*
+1+
+#8000000
